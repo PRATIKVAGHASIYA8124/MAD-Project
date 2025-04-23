@@ -1,9 +1,3 @@
-/*
- * @ Author: Chung Nguyen Thanh <chunhthanhde.dev@gmail.com>
- * @ Created: 2024-12-21 21:28:06
- * @ Message: 🎯 Happy coding and Have a nice day! 🌤️
- */
-
 import 'package:cinema_booking/common/widgets/space/widget_spacer.dart';
 import 'package:cinema_booking/core/configs/theme/app_color.dart';
 import 'package:cinema_booking/presentation/home/bloc/home_bloc.dart';
@@ -41,12 +35,8 @@ class _HomeContentScreenState extends State<HomeContentScreen> {
       providers: [
         BlocProvider(create: (context) => HomeBannerBloc(homeBloc: homeBloc)),
         BlocProvider(create: (context) => HomeGenresBloc(homeBloc: homeBloc)),
-        BlocProvider(
-          create: (context) => RecommendedMoviesBloc(homeBloc: homeBloc),
-        ),
-        BlocProvider(
-          create: (context) => HomeMoviesGenresBloc(homeBloc: homeBloc),
-        ),
+        BlocProvider(create: (context) => RecommendedMoviesBloc(homeBloc: homeBloc)),
+        BlocProvider(create: (context) => HomeMoviesGenresBloc(homeBloc: homeBloc)),
       ],
       child: BlocBuilder<HomeBloc, HomeState>(
         builder: (context, state) {

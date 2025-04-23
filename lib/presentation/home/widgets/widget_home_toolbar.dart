@@ -21,8 +21,7 @@ class WidgetHomeToolbar extends StatefulWidget {
   State<WidgetHomeToolbar> createState() => _WidgetHomeToolbarState();
 }
 
-class _WidgetHomeToolbarState extends State<WidgetHomeToolbar>
-    with TickerProviderStateMixin {
+class _WidgetHomeToolbarState extends State<WidgetHomeToolbar> with TickerProviderStateMixin {
   int _textIndex = 0;
   late Timer _timer;
   late AnimationController _avatarController;
@@ -42,27 +41,27 @@ class _WidgetHomeToolbarState extends State<WidgetHomeToolbar>
   void _initTextWidgets() {
     _textWidgets.add(_buildUserInfo());
     _textWidgets.add(_buildAlternateText("Hello Have a nice day"));
-    _textWidgets.add(_buildAlternateText("Cinema booking yêu bạn"));
+    _textWidgets.add(_buildAlternateText("Cinema booking"));
   }
 
   void _setupAnimations() {
-    _avatarController = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 2),
-    )..repeat(reverse: true);
+    _avatarController = AnimationController(vsync: this, duration: const Duration(seconds: 2))
+      ..repeat(reverse: true);
 
-    _avatarGlow = Tween<double>(begin: 1.0, end: 1.2).animate(
-      CurvedAnimation(parent: _avatarController, curve: Curves.easeInOut),
-    );
+    _avatarGlow = Tween<double>(
+      begin: 1.0,
+      end: 1.2,
+    ).animate(CurvedAnimation(parent: _avatarController, curve: Curves.easeInOut));
 
     _notificationController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 400),
     );
 
-    _notificationShake = Tween<double>(begin: 0.0, end: 4.0).animate(
-      CurvedAnimation(parent: _notificationController, curve: Curves.elasticIn),
-    );
+    _notificationShake = Tween<double>(
+      begin: 0.0,
+      end: 4.0,
+    ).animate(CurvedAnimation(parent: _notificationController, curve: Curves.elasticIn));
   }
 
   void _triggerNotificationShake() {
@@ -92,21 +91,13 @@ class _WidgetHomeToolbarState extends State<WidgetHomeToolbar>
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       color: AppColors.darkBackground,
       height: 70,
-      child: Row(
-        children: <Widget>[_buildAvatarAndName(), _buildNotificationIcon()],
-      ),
+      child: Row(children: <Widget>[_buildAvatarAndName(), _buildNotificationIcon()]),
     );
   }
 
   Widget _buildAvatarAndName() {
     return Expanded(
-      child: Row(
-        children: [
-          _buildAnimatedAvatar(),
-          WidgetSpacer(width: 24),
-          _buildAnimatedText(),
-        ],
-      ),
+      child: Row(children: [_buildAnimatedAvatar(), WidgetSpacer(width: 24), _buildAnimatedText()]),
     );
   }
 
@@ -157,10 +148,7 @@ class _WidgetHomeToolbarState extends State<WidgetHomeToolbar>
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Text(
-          'Chung Nguyen Thanh',
-          style: AppFont.medium_white_16.copyWith(fontSize: 15),
-        ),
+        Text('Pratik Vaghasiya', style: AppFont.medium_white_16.copyWith(fontSize: 15)),
         GestureDetector(
           onTap: () {
             _clickSignOut();
@@ -169,10 +157,7 @@ class _WidgetHomeToolbarState extends State<WidgetHomeToolbar>
             opacity: 0.5,
             child: Row(
               children: <Widget>[
-                Text(
-                  'Vietnam',
-                  style: AppFont.medium_white_16.copyWith(fontSize: 14),
-                ),
+                Text('Logout', style: AppFont.medium_white_16.copyWith(fontSize: 14)),
                 const Icon(Icons.keyboard_arrow_down, color: Colors.white),
               ],
             ),
@@ -187,9 +172,7 @@ class _WidgetHomeToolbarState extends State<WidgetHomeToolbar>
       key: ValueKey(text),
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Text(text, style: AppFont.medium_white_16, textAlign: TextAlign.center),
-      ],
+      children: <Widget>[Text(text, style: AppFont.medium_white_16, textAlign: TextAlign.center)],
     );
   }
 
@@ -197,10 +180,7 @@ class _WidgetHomeToolbarState extends State<WidgetHomeToolbar>
     return AnimatedBuilder(
       animation: _notificationController,
       builder: (context, child) {
-        return Transform.translate(
-          offset: Offset(_notificationShake.value, 0.0),
-          child: child,
-        );
+        return Transform.translate(offset: Offset(_notificationShake.value, 0.0), child: child);
       },
       child: GestureDetector(
         onTap: () {
@@ -218,11 +198,7 @@ class _WidgetHomeToolbarState extends State<WidgetHomeToolbar>
               ),
             ],
           ),
-          child: const Icon(
-            Icons.notifications,
-            color: AppColors.white,
-            size: 24,
-          ),
+          child: const Icon(Icons.notifications, color: AppColors.white, size: 24),
         ),
       ),
     );

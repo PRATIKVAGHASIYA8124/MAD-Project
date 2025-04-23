@@ -8,37 +8,21 @@ import 'package:cinema_booking/presentation/booking/booking_seat_type/book_seat_
 import 'package:cinema_booking/presentation/booking/booking_time_slot/book_time_slot_main.dart';
 import 'package:cinema_booking/presentation/auth_guard.dart';
 import 'package:cinema_booking/presentation/home/home.dart';
-import 'package:cinema_booking/presentation/intro/get_started.dart';
 import 'package:cinema_booking/presentation/login/login.dart';
 import 'package:cinema_booking/presentation/movie_detail/movie_detail_info.dart';
 import 'package:cinema_booking/presentation/register/register.dart';
-import 'package:cinema_booking/presentation/splash/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter appRouter = GoRouter(
   routerNeglect: false,
-  initialLocation: '/splash',
+  initialLocation: '/login',
   routes: [
-    GoRoute(path: '/splash', builder: (context, state) => const SplashPage()),
-    GoRoute(
-      path: '/get-started',
-      builder: (context, state) => const GetStartedPage(),
-    ),
     GoRoute(path: '/login', builder: (context, state) => const LoginScreen()),
-    GoRoute(
-      path: '/register',
-      builder: (context, state) => const RegisterScreen(),
-    ),
+    GoRoute(path: '/register', builder: (context, state) => const RegisterScreen()),
 
-    GoRoute(
-      path: '/',
-      builder: (context, state) => const AuthGuard(child: HomeScreen()),
-    ),
-    GoRoute(
-      path: '/user',
-      builder: (context, state) => const AuthGuard(child: UserInfoScreen()),
-    ),
+    GoRoute(path: '/', builder: (context, state) => const AuthGuard(child: HomeScreen())),
+    GoRoute(path: '/user', builder: (context, state) => const AuthGuard(child: UserInfoScreen())),
     GoRoute(
       path: '/allMovies',
       builder: (context, state) => const AuthGuard(child: AllMoviesScreen()),
@@ -58,9 +42,7 @@ final GoRouter appRouter = GoRouter(
         return AuthGuard(
           child:
               args == null
-                  ? const Scaffold(
-                    body: Center(child: Text("Invalid arguments")),
-                  )
+                  ? const Scaffold(body: Center(child: Text("Invalid arguments")))
                   : BookSeatSlotScreen(args: args),
         );
       },
@@ -72,9 +54,7 @@ final GoRouter appRouter = GoRouter(
         return AuthGuard(
           child:
               movie == null
-                  ? const Scaffold(
-                    body: Center(child: Text("Invalid movie data")),
-                  )
+                  ? const Scaffold(body: Center(child: Text("Invalid movie data")))
                   : BookTimeSlotScreen(movie: movie),
         );
       },
@@ -86,9 +66,7 @@ final GoRouter appRouter = GoRouter(
         return AuthGuard(
           child:
               movieDetail == null
-                  ? const Scaffold(
-                    body: Center(child: Text("Invalid movie data")),
-                  )
+                  ? const Scaffold(body: Center(child: Text("Invalid movie data")))
                   : MovieInfoScreen(movie: movieDetail),
         );
       },

@@ -1,6 +1,55 @@
-# Cinema Booking App
+# A simplified Real Movie Booking App 🎬 🍿 - Built with Flutter, Clean Template, BLoC, REST API, Firebase Auth, and Unit-Tests.
 
-A Flutter application for booking cinema tickets.
+## 🎬 Working application
+
+Check out the **live web demo** -> _coming soon_ 
+
+<table>
+  <tr>
+    <th>Screen</th>
+    <th>Preview</th>
+    <th>Screen</th>
+    <th>Preview</th>
+  </tr>
+  <tr>
+    <td><strong>Begin Screen</strong></td>
+    <td><img src="media/images/begin_screen.png" width="300"></td>
+    <td><strong>Get Start Screen</strong></td>
+    <td><img src="media/images/get_start.jpg" width="300"></td>
+  </tr>
+  <tr>
+    <td><strong>Home Screen</strong></td>
+    <td><img src="media/images/home_screen.jpeg" width="300"></td>
+    <td><strong>Movie Screen</strong></td>
+    <td><img src="media/images/movie_screen.jpeg" width="300"></td>
+  </tr>
+  <tr>
+    <td><strong>Login Screen</strong></td>
+    <td><img src="media/images/login_screen.jpeg" width="300"></td>
+    <td><strong>Register Screen</strong></td>
+    <td><img src="media/images/register_screen.jpeg" width="300"></td>
+  </tr>
+  </tr>
+    <tr>
+    <td><strong>All Movie Screen</strong></td>
+    <td><img src="media/images/all_movie_screen.jpeg" width="300"></td>
+    <td><strong>About Screen</strong></td>
+    <td><img src="media/images/about_screen.jpeg" width="300"></td>
+  </tr>
+  <tr>
+    <td><strong>Booking Time</strong></td>
+    <td><img src="media/images/booking_time.jpeg" width="300"></td>
+    <td><strong>Booking Seat Type</strong></td>
+    <td><img src="media/images/booking_seat_type.jpeg" width="300"></td>
+  </tr>
+  <tr>
+    <td><strong>Booking Slot</strong></td>
+    <td><img src="media/images/booking_slot.jpg" width="300"></td>
+    <td><strong>Tickets Screen</strong></td>
+    <td><img src="media/images/tickets_screen.jpg" width="300"></td>
+  </tr>
+</table>
+
 
 ## 🎬 Cinema Booking
 
@@ -8,22 +57,7 @@ A Flutter application for booking cinema tickets.
 
 Cinema Booking is an application that helps users search for and book movie tickets 🎟️ at cinemas in Hanoi. The app offers a user-friendly and cinematic interface, quick operations, and a convenient ticket-booking experience.
 
-It leverages Flutter Clean Architecture and Flutter BLoC, ensuring a well-structured and scalable design that facilitates future growth, comprehensive testing, and efficient QA processes. That also makes it easy to develop hard-to-reach UseCase in the future.
-
-### 📌 Cinema Booking Components
-
-This is the collection of components that I developer for [Cinema Booking](https://github.com/ChunhThanhDe/cinema-booking), includes:
-
-- ✅ Splash and Get Start ([#8 feat screen splash](https://github.com/ChunhThanhDe/cinema-booking/pull/8)) ([#10 feat get-start welcome screen](https://github.com/ChunhThanhDe/cinema-booking/pull/10))
-- ✅ Login ([#19 feat login screen](https://github.com/ChunhThanhDe/cinema-booking/pull/19))
-- ✅ Home Main ([#20 feat home screen](https://github.com/ChunhThanhDe/cinema-booking/pull/20))
-- ✅ Movie Detail ([#25 feat detail movie screen](https://github.com/ChunhThanhDe/cinema-booking/pull/25))
-- ✅ Search All Movie ([#28 feat all movie screen](https://github.com/ChunhThanhDe/cinema-booking/pull/28))
-- ✅ Booking Tickets Movie ([#33 feat booking movie tickets screen](https://github.com/ChunhThanhDe/cinema-booking/pull/33))
-- ✅ Tickets hold ([#38 feat screen tickets hold](https://github.com/ChunhThanhDe/cinema-booking/pull/38))
-- ✅ Mock API Postman for RestAPI
-
-## 📦 Tech Stack
+# 📦 Tech Stack
 
 Some libraries are used in this project and shout out to them because they are very helpful for the community.
 

@@ -10,6 +10,19 @@ Cinema Booking is an application that helps users search for and book movie tick
 
 It leverages Flutter Clean Architecture and Flutter BLoC, ensuring a well-structured and scalable design that facilitates future growth, comprehensive testing, and efficient QA processes. That also makes it easy to develop hard-to-reach UseCase in the future.
 
+### 📌 Cinema Booking Components
+
+This is the collection of components that I developer for [Cinema Booking](https://github.com/ChunhThanhDe/cinema-booking), includes:
+
+- ✅ Splash and Get Start ([#8 feat screen splash](https://github.com/ChunhThanhDe/cinema-booking/pull/8)) ([#10 feat get-start welcome screen](https://github.com/ChunhThanhDe/cinema-booking/pull/10))
+- ✅ Login ([#19 feat login screen](https://github.com/ChunhThanhDe/cinema-booking/pull/19))
+- ✅ Home Main ([#20 feat home screen](https://github.com/ChunhThanhDe/cinema-booking/pull/20))
+- ✅ Movie Detail ([#25 feat detail movie screen](https://github.com/ChunhThanhDe/cinema-booking/pull/25))
+- ✅ Search All Movie ([#28 feat all movie screen](https://github.com/ChunhThanhDe/cinema-booking/pull/28))
+- ✅ Booking Tickets Movie ([#33 feat booking movie tickets screen](https://github.com/ChunhThanhDe/cinema-booking/pull/33))
+- ✅ Tickets hold ([#38 feat screen tickets hold](https://github.com/ChunhThanhDe/cinema-booking/pull/38))
+- ✅ Mock API Postman for RestAPI
+
 ## 📦 Tech Stack
 
 Some libraries are used in this project and shout out to them because they are very helpful for the community.

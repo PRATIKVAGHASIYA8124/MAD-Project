@@ -1,15 +1,15 @@
 # A simplified Real Movie Booking App 🎬 🍿 - Built with Flutter, Clean Template, BLoC, REST API, Firebase Auth, and Unit-Tests.
 
-> I’ve open-sourced this project to showcase some of my skills and to help early-career Flutter developers grow in their career.
+> I've open-sourced this project to showcase some of my skills and to help early-career Flutter developers grow in their career.
 >
-> Like ["Nezha: Birth Of The Demon Child"](https://www.youtube.com/watch?v=xdOgym7MLAU), I believe that for those just starting out in Flutter, completing this project might be a challenge. However, once you get through it, you’ll either succeed and grow stronger. (Không thành công cũng thành nhân) (失败也是成功)
+> Like ["Nezha: Birth Of The Demon Child"](https://www.youtube.com/watch?v=xdOgym7MLAU), I believe that for those just starting out in Flutter, completing this project might be a challenge. However, once you get through it, you'll either succeed and grow stronger. (Không thành công cũng thành nhân) (失败也是成功)
 >
-> I’ll also support so feel free to start with new issue if you have difficulty because I know it’s not as easy for everyone. :muscle:
+> I'll also support so feel free to start with new issue if you have difficulty because I know it's not as easy for everyone. :muscle:
 
 
 ## Happy new year 2025 🎉
 
-2025 kicks off with AI evolving at an incredible pace, but also brings a wave of layoffs in the IT industry. Don’t be too afraid! This is not the end—stay patient, keep learning, and wait for the right moment.
+2025 kicks off with AI evolving at an incredible pace, but also brings a wave of layoffs in the IT industry. Don't be too afraid! This is not the end—stay patient, keep learning, and wait for the right moment.
 
 And what could be better than starting a new project to kick off the year? 
 
@@ -466,3 +466,72 @@ I have reused part of the `UI idea` and `Data Mock` from this project.
 ## License
 
 Feel free to use my code on your project. It would be great if you put a reference to this repository.
+
+## How to Delete Files from the Repository
+
+If you need to delete files from the repository, follow these steps:
+
+1. **Delete the file locally**
+   ```bash
+   # Delete a single file
+   git rm path/to/file
+   
+   # Delete a directory and its contents
+   git rm -r path/to/directory
+   ```
+
+2. **Commit the deletion**
+   ```bash
+   git commit -m "Remove: [description of what you're deleting]"
+   ```
+
+3. **Push the changes**
+   ```bash
+   git push origin main
+   ```
+
+### Example
+To delete a specific file (e.g., splash screen):
+```bash
+git rm lib/presentation/splash/splash.dart
+git commit -m "Remove: splash screen"
+git push origin main
+```
+
+To delete a directory (e.g., intro folder):
+```bash
+git rm -r lib/presentation/intro
+git commit -m "Remove: intro section"
+git push origin main
+```
+
+## Important Notes
+- Make sure to update any references to deleted files in your code
+- If you're deleting files that are tracked by git, use `git rm` instead of just deleting the file
+- Always commit your changes with a descriptive message
+- If you need to keep the file locally but remove it from git tracking, use `git rm --cached filename`
+
+## Project Structure
+```
+lib/
+  ├── presentation/
+  │   ├── home/
+  │   ├── login/
+  │   ├── register/
+  │   └── ...
+  ├── domain/
+  ├── data/
+  └── ...
+```
+
+## Getting Started
+1. Clone the repository
+2. Install dependencies: `flutter pub get`
+3. Run the app: `flutter run`
+
+## Contributing
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
